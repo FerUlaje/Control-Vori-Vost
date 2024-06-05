@@ -30,6 +30,8 @@ st.title('_Control_ :red[Vori Vost] :sunglasses:') # titulo de la página
 dest_button = st.button('Destajo') # creando botón para ver destajos
 
 if dest_button:
+    st.subheader('Destajos', divider='red')
+    st.subheader('ML, Piezas y Días')
     st.line_chart(total_dest, x='semana', y='suma', color="#FF0000")
     st.dataframe(total_dest, hide_index=True)
 
