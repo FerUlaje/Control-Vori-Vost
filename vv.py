@@ -9,6 +9,7 @@ data = {
 
 total_dest = pd.DataFrame(data)
 
+
 data2 = {
     'semana': [16, 17, 18, 19, 20, 21, 22],
     'ML': [215, 194, 137, 135, 165, 159, 169],
@@ -21,7 +22,9 @@ destajo_des = pd.DataFrame(data2)
 st.title('_Control_ :red[Vori Vost] :sunglasses:') # titulo de la página
 
 dest_button = st.button('Destajo') # creando botón para ver destajos
-hrs_extra = st.button('Horas Extras') # creando botón para ver horas extras
 
 if dest_button:
-    total_dest
+    st.line_chart(total_dest, x='semana', y='suma', color="#FF0000")
+    st.dataframe(total_dest, hide_index=True)
+
+hrs_extra = st.button('Horas Extras') # creando botón para ver horas extras
