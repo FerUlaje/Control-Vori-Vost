@@ -18,4 +18,10 @@ data2 = {
 
 destajo_des = pd.DataFrame(data2)
 
-st.title('_Control_ :red[Vori Vost] :sunglasses:')
+st.title('_Control_ :red[Vori Vost] :sunglasses:') # titulo de la página
+
+dest_button = st.button('Destajo') # creando botón para ver destajos
+hrs_extra = st.button('Horas Extras') # creando botón para ver horas extras
+
+if dest_button:
+    total_dest
