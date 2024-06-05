@@ -1,6 +1,6 @@
 import pandas as pd
-import streamlit as st
 import plotly.express as px
+import streamlit as st
 
 data = {
     'semana': [16, 17, 18, 19, 20, 21, 22],
