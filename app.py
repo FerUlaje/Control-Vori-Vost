@@ -39,7 +39,7 @@ data5 = {
 
 costo_hrs = pd.DataFrame(data5)
 
-st.title('_Control_ :red[Vori Vost] :pinched_fingers:') # titulo de la página
+st.title('_Control_ :red[Vori Vost] :black_nib:') # titulo de la página
 
 dest_button = st.button('Destajo') # creando botón para ver destajos
 
@@ -65,6 +65,8 @@ if hrs_extra:
     st.line_chart(no_hrs, x='semana', y='hrs', color="#FF0000")
     st.dataframe(no_hrs, hide_index=True)
     st.subheader('Costo de Horas Extras')
-    st.line_chart(costo_hrs, x='semana', y='costo')
-    st.dataframe(costo_hrs.style.highlight_max(axis=0), hide_index=True)
-
+    st.line_chart(costo_hrs, x='semana', y='costo', color='#FF0000')
+    st.dataframe(costo_hrs, column_config={
+        "semana":"Semana",
+        "costo": st.column_config.NumberColumn("Costo", format="$%d"),
+    }, hide_index=True)
